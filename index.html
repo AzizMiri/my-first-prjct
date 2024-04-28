@@ -13,7 +13,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    <!--fonts link-->
+    <style>.zoomable {
+      position: relative;
+      overflow: hidden;
+      border-radius: 30px;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  img {
+    display: block;
+    max-width: 100%;
+}
+
+  .zoomable__img {
+
+      transform-origin: var(--zoom-pos-x, 0%) var(--zoom-pos-y, 0%);
+      transition: transform 0.15s linear;
+  }
+  
+  .zoomable--zoomed .zoomable__img {
+      cursor: zoom-in;
+      transform: scale(var(--zoom, 2));
+  }
+  </style>
 </head>
 <body>
     <!--top navbar-->
@@ -30,7 +51,7 @@
     <!--navbar-->
     <nav class="navbar navbar-expand-lg" id="navbar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html" id="logo"><span id="span1">E</span>Lectronic <span>Shop</span></a>
+        <a class="navbar-brand" href="index.html" id="logo"><span id="span1">A</span>Z1Z'S <span>Shop</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span><img src="./images/menu.png" alt="" width="30px"></span>
         </button>
@@ -49,7 +70,7 @@
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
                 <li><a class="dropdown-item" href="#">GPU</a></li>
                 <li><a class="dropdown-item" href="#">CPU</a></li>
-                <li><a class="dropdown-item" href="#"CASE</a></li>
+                <li><a class="dropdown-item" href="#">CASE</a></li>
                 <li><a class="dropdown-item" href="#">KEYBOARD</a></li>
                 <li><a class="dropdown-item" href="#">MOUSE</a></li>
                 <li><a class="dropdown-item" href="#">HEADPHONES</a></li>
@@ -100,7 +121,10 @@
       <div class="row" style="margin-top: 30px;">
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./media/rtx4070ti.jpg" alt="">
+            <div class="zoomable">
+            <img src="./media/rtx4070ti.jpg" alt="" class="zoomable__img">
+
+          </div>
             <div class="card-body">
               <h3 class="text-center">RTX4070 ti</h3>
               <p class="text-center">12 vram.</p>
@@ -117,7 +141,9 @@
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./media/razer.jpg" alt="">
+            <div class="zoomable">
+              <img src="./media/razer.jpg" alt="" class="zoomable__img">
+            </div>
             <div class="card-body">
               <h3 class="text-center">RAZER HUNTSMAN </h3>
               <p class="text-center">mecanical keyboard.</p>
@@ -134,7 +160,9 @@
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./media/msi case.jpg" alt="">
+            <div class="zoomable">
+              <img src="./media/msi case.jpg" alt="" class="zoomable__img">
+            </div>
             <div class="card-body">
               <h3 class="text-center">M110</h3>
               <p class="text-center">pc case with good air flow and style.</p>
@@ -151,7 +179,9 @@
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./media/mouse.jpg" alt="">
+            <div class="zoomable">
+              <img src="./media/mouse.jpg" alt="" class="zoomable__img">
+            </div>
             <div class="card-body">
               <h3 class="text-center">GLORIOUS MODEL O</h3>
               <p class="text-center">lightest mouse ever.</p>
@@ -171,7 +201,9 @@
       <div class="row" style="margin-top: 30px;">
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./media/ssd.png" alt="">
+            <div class="zoomable">
+              <img src="./media/ssd.png" alt="" class="zoomable__img">
+            </div>
             <div class="card-body">
               <h3 class="text-center">MSI NVME ssd 1tb</h3>
               <p class="text-center">M390 M.2.</p>
@@ -188,7 +220,9 @@
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./media/AOC.jpg" alt="">
+            <div class="zoomable">
+              <img src="./media/AOC.jpg" alt="" class="zoomable__img">
+            </div>
             <div class="card-body">
               <h3 class="text-center">PC Moniter AOC</h3>
               <p class="text-center">240 hz 0.5 ms.</p>
@@ -205,7 +239,9 @@
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./media/ram.jpg" alt="">
+            <div class="zoomable">
+            <img src="./media/ram.jpg" alt="" class="zoomable__img">
+            </div>
             <div class="card-body">
               <h3 class="text-center">Corsair Dominator Platinum</h3>
               <p class="text-center">DDR4 3200mhz 2x16.</p>
@@ -222,7 +258,9 @@
         </div>
         <div class="col-md-3 py-3 py-md-0">
           <div class="card">
-            <img src="./media/hea.jpg" alt="">
+            <div class="zoomable">
+            <img src="./media/hea.jpg" alt="" class="zoomable__img">
+            </div>
             <div class="card-body">
               <h3 class="text-center">Corsair Headphone</h3>
               <p class="text-center">High sound quality at low price 20hz-20000hz.</p>
@@ -386,8 +424,165 @@
 
 
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      /*
+* Constants
+*/
+
+const Default = {
+  initialZoom: 3,
+  minZoom: 1.25,
+  maxZoom: 4,
+  zoomSpeed: 0.01
+};
+
+/*
+* Class definition
+*/
+
+class Zoomable {
+  constructor(element, config) {
+      this.element = element;
+      this.config = this._mergeConfig(config);
+
+      const { initialZoom, minZoom, maxZoom } = this.config;
+
+      this.zoomed = false;
+      this.initialZoom = Math.max(Math.min(initialZoom, maxZoom), minZoom);
+      this.zoom = this.initialZoom;
+
+      this.img = element.querySelector(".zoomable__img");
+      this.img.draggable = false;
+      this.element.style.setProperty("--zoom", this.initialZoom);
+
+      this._addEventListeners();
+  }
+
+  static get Default() {
+      return Default;
+  }
+
+  _addEventListeners() {
+      this.element.addEventListener("mouseover", () =>
+          this._handleMouseover()
+      );
+      this.element.addEventListener("mousemove", (evt) =>
+          this._handleMousemove(evt)
+      );
+      this.element.addEventListener("mouseout", () => this._handleMouseout());
+      this.element.addEventListener("wheel", (evt) => this._handleWheel(evt));
+
+      this.element.addEventListener("touchstart", (evt) =>
+          this._handleTouchstart(evt)
+      );
+      this.element.addEventListener("touchmove", (evt) =>
+          this._handleTouchmove(evt)
+      );
+      this.element.addEventListener("touchend", () => this._handleTouchend());
+  }
+
+  _handleMouseover() {
+      if (this.zoomed) {
+          return;
+      }
+
+      this.element.classList.add("zoomable--zoomed");
+
+      this.zoomed = true;
+  }
+
+  _handleMousemove(evt) {
+      if (!this.zoomed) {
+          return;
+      }
+
+      const elPos = this.element.getBoundingClientRect();
+
+      const percentageX = `${
+          ((evt.clientX - elPos.left) * 100) / elPos.width
+      }%`;
+      const percentageY = `${
+          ((evt.clientY - elPos.top) * 100) / elPos.height
+      }%`;
+
+      this.element.style.setProperty("--zoom-pos-x", percentageX);
+      this.element.style.setProperty("--zoom-pos-y", percentageY);
+  }
+
+  _handleMouseout() {
+      if (!this.zoomed) {
+          return;
+      }
+
+      this.element.style.setProperty("--zoom", this.initialZoom);
+      this.element.classList.remove("zoomable--zoomed");
+
+      this.zoomed = false;
+  }
+
+  _handleWheel(evt) {
+      if (!this.zoomed) {
+          return;
+      }
+
+      evt.preventDefault();
+
+      const newZoom = this.zoom + evt.deltaY * (this.config.zoomSpeed * -1);
+      const { minZoom, maxZoom } = this.config;
+
+      this.zoom = Math.max(Math.min(newZoom, maxZoom), minZoom);
+      this.element.style.setProperty("--zoom", this.zoom);
+  }
+
+  _handleTouchstart(evt) {
+      evt.preventDefault();
+
+      this._handleMouseover();
+  }
+
+  _handleTouchmove(evt) {
+      if (!this.zoomed) {
+          return;
+      }
+
+      const elPos = this.element.getBoundingClientRect();
+
+      let percentageX =
+          ((evt.touches[0].clientX - elPos.left) * 100) / elPos.width;
+      let percentageY =
+          ((evt.touches[0].clientY - elPos.top) * 100) / elPos.height;
+
+      percentageX = Math.max(Math.min(percentageX, 100), 0);
+      percentageY = Math.max(Math.min(percentageY, 100), 0);
+
+      this.element.style.setProperty("--zoom-pos-x", `${percentageX}%`);
+      this.element.style.setProperty("--zoom-pos-y", `${percentageY}%`);
+  }
+
+  _handleTouchend(evt) {
+      this._handleMouseout();
+  }
+
+  _mergeConfig(config) {
+      return {
+          ...this.constructor.Default,
+          ...(typeof config === "object" ? config : {})
+      };
+  }
+}
+
+/*
+* Implementation
+*/
+
+const zoomables = document.querySelectorAll(".zoomable");
+
+for (const el of zoomables) {
+  new Zoomable(el);
+}
+
+  </script>
 
 </body>
 </html>

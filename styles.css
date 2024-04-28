@@ -103,7 +103,7 @@
 }
 .dropdown-menu li a{
     color: white;
-    transiion: 0.5s ease;
+    transition: 0.5s ease;
 }
 .dropdown-menu .li a:hover{
     background-color:black;
